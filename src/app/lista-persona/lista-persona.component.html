@@ -1,0 +1,26 @@
+<h2>lista-persona works!</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Ubicacion</th>
+            <th>Telefono</th>
+            <th>Email</th>
+            <th>Rol</th>
+        </tr> 
+    </thead>
+    <tbody>
+        <tr *ngFor= "let persona of personas">
+            <td>{{persona.id}}</td>
+            <td>{{persona.nombre}}</td>
+            <td>{{persona.apellido}}</td>
+            <td>{{persona.ubicacion}}</td>
+            <td>{{persona.telefono}}</td>
+            <td>{{persona.email}}</td>
+            <td>{{persona.rol}}</td>
+        </tr>
+    </tbody>
+    
+</table>
