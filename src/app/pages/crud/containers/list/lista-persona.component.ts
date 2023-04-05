@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Persona } from '../persona';
-import { PersonaService } from '../persona.service';
+import { Persona } from 'src/app/model/persona';
+import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
   selector: 'app-lista-persona',

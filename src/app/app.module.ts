@@ -3,18 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListaPersonaComponent } from './lista-persona/lista-persona.component';
-import { from } from 'rxjs';
+import { ListaPersonaComponent } from './pages/crud/containers/list/lista-persona.component';
 import { HttpClientModule } from '@angular/common/http';
-import { RegistrarPersonaComponent } from './registrar-persona/registrar-persona.component';
+import { RegistrarPersonaComponent } from './pages/crud/containers/forms/registrar-persona/registrar-persona.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DialogComponent } from './shared/dialog/dialog/dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaPersonaComponent,
     RegistrarPersonaComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
