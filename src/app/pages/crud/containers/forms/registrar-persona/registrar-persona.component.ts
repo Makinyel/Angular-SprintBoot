@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Persona } from 'src/app/model/persona';
-//import { PersonaService } from 'src/app/service/persona.service';
 import  {PersonaService} from '../../../../../service/persona.service'
 import { Router } from '@angular/router';
 
@@ -27,7 +26,6 @@ export class RegistrarPersonaComponent {
     goLista(){
       this.router.navigate(['/personas'])
     }
-
 
     onSubmit(){
       this.registarPersona();
