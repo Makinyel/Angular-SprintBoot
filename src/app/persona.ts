@@ -5,6 +5,5 @@ export class Persona {
     ubicacion:string;
     telefono:string;
     email:string;
-    rol:number;
-
+    rol:string;
 }

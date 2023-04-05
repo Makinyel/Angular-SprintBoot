@@ -1,0 +1,64 @@
+<h3>Registro De Persona</h3>
+<div class="col-md-6 offset-md-3">
+    <form (ngSubmit)= "onSubmit()">
+        <div class="form-group">
+            <label>ID : </label>
+            <input type="text" 
+            class="form-control" 
+            id="id"
+            [(ngModel)]="persona.id"
+            name="id">
+        </div>
+        <div class="form-group">
+            <label>Nombre : </label>
+            <input type="text" 
+            class="form-control" 
+            id="nombre"
+            [(ngModel)]="persona.nombre"
+            name="nombre">
+        </div>
+        <div class="form-group">
+            <label>Apellido : </label>
+            <input type="text" 
+            class="form-control" 
+            id="apellido"
+            [(ngModel)]="persona.apellido"
+            name="apellido">
+        </div>
+        <div class="form-group">
+            <label>Ubicacion : </label>
+            <input type="text" 
+            class="form-control" 
+            id="ubicacion"
+            [(ngModel)]="persona.ubicacion"
+            name="ubicacion">
+        </div>
+        <div class="form-group">
+            <label>Telefono : </label>
+            <input type="text" 
+            class="form-control" 
+            id="telefono"
+            [(ngModel)]="persona.telefono"
+            name="telefono">
+        </div>
+        <div class="form-group">
+            <label>Email : </label>
+            <input type="text" 
+            class="form-control" 
+            id="email"
+            [(ngModel)]="persona.email"
+            name="email">
+        </div>
+        <div class="form-group">
+            <label>Rol : </label>
+            <input type="text" 
+            class="form-control" 
+            id="rol"
+            [(ngModel)]="persona.rol"
+            name="rol">
+        </div>
+        <br>
+        <button class="btn btn-success">Registar</button>
+    </form>
+</div>
+

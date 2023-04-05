@@ -10,13 +10,23 @@ import { PersonaService } from '../persona.service';
 export class ListaPersonaComponent {
     personas: Persona[];
 
-    constructor(private personaServicio:PersonaService){}
+    constructor(private personaSevice:PersonaService){}
 
     ngOnInit(): void{
-      this.getAllPersona();
+      /*this.personas = [{
+        "id":"543",
+        "nombre":"Angel",
+        "apellido":"espinosa",
+        "ubicacion":"ees",
+        "telefono":"304",
+        "email":"da@",
+        "rol":"admin"
+      }]*/
+      this.obtenerAllPersona();
     }
-    private getAllPersona(){
-      this.personaServicio.getListaPersonas().subscribe(dato =>{
+
+    private obtenerAllPersona(){
+      this.personaSevice.obtenerListaPersonas().subscribe(dato =>{
         this.personas = dato;
       })
     }
