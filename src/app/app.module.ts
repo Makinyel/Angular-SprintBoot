@@ -9,6 +9,11 @@ import { RegistrarPersonaComponent } from './pages/crud/containers/forms/registr
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogComponent } from './shared/dialog/dialog/dialog.component';
+import { EditarPersonaComponent } from './pages/crud/containers/forms/editar-persona/editar-persona.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -16,13 +21,18 @@ import { DialogComponent } from './shared/dialog/dialog/dialog.component';
     ListaPersonaComponent,
     RegistrarPersonaComponent,
     DialogComponent,
+    EditarPersonaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatButtonModule,
+    MatInputModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

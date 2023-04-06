@@ -9,6 +9,7 @@
             <th>Telefono</th>
             <th>Email</th>
             <th>Rol</th>
+            <th>Acciones</th>
         </tr> 
     </thead>
     <tbody>
@@ -20,7 +21,25 @@
             <td>{{persona.telefono}}</td>
             <td>{{persona.email}}</td>
             <td>{{persona.rol}}</td>
+            
+            <td>      
+            <button  
+            mat-icon-button
+            aria-label="Editar registro" 
+            (click)= "editPersona(persona)"
+            class="btn btn" style="margin-top: -5px; 
+            background-color: rgb(0, 183, 255);
+            color: aliceblue;"            
+            ><mat-icon>edit</mat-icon></button>      
+            <button 
+            mat-icon-button
+            aria-label="Editar registro" 
+            (click)= "eliminarPersona(persona.id)" 
+            class="btn btn" style="margin-top: -5px; 
+            background-color: rgb(218, 47, 47);
+            color: aliceblue;"><mat-icon>delete</mat-icon></button>
+            </td>
         </tr>
-    </tbody>
-    
+    </tbody>    
 </table>
+

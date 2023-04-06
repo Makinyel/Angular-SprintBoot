@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Persona } from 'src/app/model/persona';
 import { PersonaService } from 'src/app/service/persona.service';
 
@@ -9,8 +10,9 @@ import { PersonaService } from 'src/app/service/persona.service';
 })
 export class ListaPersonaComponent {
     personas: Persona[];
+    dataSource: Persona[] = [];
 
-    constructor(private personaSevice:PersonaService){}
+    constructor(private personaSevice:PersonaService, private router:Router){}
 
     ngOnInit(): void{
       /*this.personas = [{
@@ -30,4 +32,16 @@ export class ListaPersonaComponent {
         this.personas = dato;
       })
     }
+
+    editPersona(persona:Persona){
+      this.router.navigate(['editar-persona',persona]);
+      
+    }
+    eliminarPersona(id:String){
+      this.personaSevice.eliminarPersona(id).subscribe(dato =>{
+        console.log("ESTA ENTRANDO"+dato);
+        this.obtenerAllPersona();
+      })
+    }
+      
 }
