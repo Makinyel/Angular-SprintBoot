@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,8 @@ import { MatIconModule } from '@angular/material/icon';
     RegistrarPersonaComponent,
     DialogComponent,
     EditarPersonaComponent,
+    FilterPipe,
+  
   ],
   imports: [
     BrowserModule,

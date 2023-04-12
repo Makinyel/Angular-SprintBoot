@@ -1,3 +1,24 @@
+<h2>Filtar:</h2>
+<form>
+<div class="col-md-3 offset-md-0">
+    <label>Code : </label>
+    <input type="text" 
+    class="form-control" 
+    id="code"
+    name="filterUser"
+    placeholder="Search..."[(ngModel)]="filterUser">
+
+    <button  
+    mat-icon-button
+    aria-label="Filtar Por Id" 
+    class="btn btn" style="margin-top: 10px;
+    
+    background-color: rgb(0, 183, 255);
+    color: aliceblue;"            
+    ><mat-icon>Filtar</mat-icon></button>   
+</div>
+</form>
+<br>
 <h2>Esta Es La LisTa De Personas!</h2>
 <table class="table table-striped">
     <thead class="table-dark">
@@ -13,7 +34,7 @@
         </tr> 
     </thead>
     <tbody>
-        <tr *ngFor= "let persona of personas">
+        <tr *ngFor= "let persona  of personas | filter:filterUser">
             <td>{{persona.id}}</td>
             <td>{{persona.nombre}}</td>
             <td>{{persona.apellido}}</td>

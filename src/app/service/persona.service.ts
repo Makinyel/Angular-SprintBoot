@@ -9,7 +9,6 @@ import { HttpClient } from '@angular/common/http';
 export class PersonaService {
   //Esta URL Obtiene todos las personas en el Backeng
   private baseURL="http://localhost:8080/persona/persona";
-  private deleteURL="http://localhost:8080/persona/persona";
   
   constructor(private httpClient: HttpClient) {   }
   

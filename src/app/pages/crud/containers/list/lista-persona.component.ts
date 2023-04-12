@@ -12,7 +12,8 @@ export class ListaPersonaComponent {
     personas: Persona[];
     dataSource: Persona[] = [];
 
-    constructor(private personaSevice:PersonaService, private router:Router){}
+    constructor(private personaSevice:PersonaService, private router:Router){    }
+    filterUser=''
 
     ngOnInit(): void{
       /*this.personas = [{
