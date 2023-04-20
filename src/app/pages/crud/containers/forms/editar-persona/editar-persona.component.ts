@@ -1,8 +1,8 @@
 import  swal  from 'sweetalert2';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from 'src/app/model/persona';
-import { PersonaService } from 'src/app/service/persona.service';
+import { PersonaService } from 'src/app/service/persona/persona.service';
 
 
 @Component({
@@ -10,7 +10,8 @@ import { PersonaService } from 'src/app/service/persona.service';
   templateUrl: './editar-persona.component.html',
   styleUrls: ['./editar-persona.component.scss']
 })
-export class EditarPersonaComponent {
+export class EditarPersonaComponent implements OnInit {
+  
   id:String;
   persona:Persona = new Persona();
   constructor(private personaService:PersonaService,private router:Router,private route:ActivatedRoute) { }
@@ -19,7 +20,7 @@ export class EditarPersonaComponent {
     this.id = this.route.snapshot.params['id'];
     this.personaService.obtenerPersonaById(this.id).subscribe(dato =>{
       this.persona = dato;
-    },error => console.log(error));
+    },error => console.log("ERORR"));
   }
 
   goListaDePersonas(){
@@ -28,8 +29,10 @@ export class EditarPersonaComponent {
   }
 
   onSubmit(){
-    this.personaService.editPersona(this.persona).subscribe(dato => {
-      this.goListaDePersonas();
-    });
-  }
+      //if(this.persona.id == this.id){
+        this.personaService.editPersona(this.persona).subscribe(dato => {
+          this.goListaDePersonas();
+        })
+    };
+  //}
 }

@@ -2,6 +2,17 @@
   <h2 class="text-center">Edición de persona</h2>
   <form (ngSubmit)= "onSubmit()" #personaForm = "ngForm">
     <div class="form-group">
+      <label>ID : </label>
+      <input type = "text"
+      class="form-control"
+      id = "id"
+      [(ngModel)] = "persona.id"
+      name = "id">
+    </div>
+   
+   
+   
+    <div class="form-group">
       <label>Nombre : </label>
       <input type = "text"
       class="form-control"
@@ -83,14 +94,11 @@
       pattern =""
       required
       placeholder="Digite su ubicacion "
-      #email = "ngModel"
+      #ubi = "ngModel"
       >
-      <div class="alert alert-danger" *ngIf= "email.invalid && (email.dirty || apellido.touched)">
+      <div class="alert alert-danger" *ngIf= "ubi.invalid && (ubi.dirty || ubi.touched)">
         <div >
-          Digite su email por favor
-        </div>
-        <div >
-          Por favor digite el email con el siguiente formato : user100@gmail.com
+          Digite su Ubicacion por favor
         </div>
       </div>
     </div>
@@ -103,15 +111,12 @@
       name = "rol"
       pattern =""
       required
-      placeholder="Digite su email "
-      #email = "ngModel"
+      placeholder="Digite su Rol "
+      #rol = "ngModel"
       >
-      <div class="alert alert-danger" *ngIf= "email.invalid && (email.dirty || apellido.touched)">
+      <div class="alert alert-danger" *ngIf= "rol.invalid && (rol.dirty || rol.touched)">
         <div >
-          Digite su email por favor
-        </div>
-        <div >
-          Por favor digite el email con el siguiente formato : user100@gmail.com
+          Digite su Rol por favor
         </div>
       </div>
     </div>

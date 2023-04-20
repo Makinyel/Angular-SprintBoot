@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Persona } from 'src/app/model/persona';
-import  {PersonaService} from '../../../../../service/persona.service'
+import { PersonaService } from 'src/app/service/persona/persona.service';
 import { Router } from '@angular/router';
 
 @Component({

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Persona } from '../model/persona';
+import { Persona } from '../../model/persona';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -27,7 +27,6 @@ export class PersonaService {
   }
 
   editPersona(persona:Persona): Observable<Object>{
-    console.log("ESTA ENTRADO");
     return this.httpClient.put(`${this.baseURL}`,persona);
   }
 
@@ -35,5 +34,4 @@ export class PersonaService {
     return this.httpClient.delete(`${this.baseURL}/${id}`);
     this.obtenerListaPersonas();
   }
-
 }

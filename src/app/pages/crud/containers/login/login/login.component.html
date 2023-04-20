@@ -1,0 +1,31 @@
+<br>
+<br>
+<br>
+<div class="col-md-6 offset-md-3">
+      <div class="login">
+        <form class="custom-form" method="post">
+          <h1>Login</h1>
+          <br>
+          <br>
+          <input
+            type="id"
+            [(ngModel)]="id"
+            name="email"
+            placeholder="Id"
+            required="required"
+          />
+          <input
+            type="password"
+            [(ngModel)]="password"
+            name="password"
+            placeholder="Password"
+            required="required"
+          />
+          <br>
+          <br>
+          <br>
+      <button class="btn btn-success" type="submit" (click)="login()">Log in</button>
+      <!-- <button style="margin-top: 40px;"   class="btn btn-success" type="submit" (click)="registar()">Register</button> -->
+        </form>
+      </div>
+  </div>
